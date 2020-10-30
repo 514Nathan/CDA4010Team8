@@ -1,0 +1,423 @@
+<!doctype html>
+<html>
+
+<head>
+<Title>Document Form</Title>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+
+<script src="script.js" defer></script>
+
+
+<header>
+<ul class ="tabs">
+	<li data-tab-target="#Identification" class="active tab"><b>Identification</b></li>
+	<li data-tab-target="#Education" class="tab"><b>Education</b></li>
+	<li data-tab-target="#Work" class="tab"><b>Work Experience</b></li>
+	<li data-tab-target="#Refrences" class="tab"><b>Refrences</b></li>
+	<li data-tab-target="#Miscellaneous" class="tab"><b>Miscellaneous</b></li>
+	<li data-tab-target="#Waiver" class="tab"><b>Waiver</b></li>
+</ul>
+<header>
+
+
+<form>
+
+<div class="tab-content">
+	
+<div id="Identification" data-tab-content class="active" >
+	
+	<!--applicant name/address/position/email/desired salary-->
+	<label for="applicantname">Name:</label>
+	<input type="text" id="applicantname" name="personal-info" required><br>
+
+	<label for="applicantemail">Email address:</label>
+	<input type="text" id="applicantemail" name="personal-info" required><br>
+	
+	<!--date of application-->
+	<!-- dev notes: these were changed from a drop-down date format to html's date picker format -->
+	<label for="appdate">Date of Application</label>
+	<input type="date" id="appdate" name="application-date" required>
+	<br>
+
+	<label for="applicantaddress">Current Address:</label>
+	<input type="text" id="applicantaddress" name="personal-info" required><br>
+	
+	
+	
+	
+	
+	<label for="CITY">City:</label>
+	<input type="text" id="CITY" name="CITY" required><br>
+	
+	<label for="STATE">State:</label>
+	<input type="text" id="STATE" name="STATE" required><br>
+	
+	<label for="ZIP">Zip Code:</label>
+	<input type="text" id="ZIP" name="ZIP" required><br>
+	
+	<!--Applicant SSN-->
+	<!--dev notes: this query was changed from a "number" input type to a text box for improved accessibility-->
+	<label for="SSN">SSN:</label>
+	
+	<input type="text" id="SSN" name="SSN" required><br>
+	
+	
+		<!-- are you at least 18 years of age? -->
+	<!-- dev notes: this query was changed from a checkbox to radio button -->
+	<p>Are you at least 18 years of age?
+
+	<label for="ageconfirm">
+	<input id="ageconfirm" type="radio" name="age-check" required> Yes
+	</label>
+
+	<label for="agedeny">
+	<input id="agedeny" type="radio" name="age-check"> No
+	</label><br>
+
+	<label for="applicantposition">Position applied for:</label>
+	<input type="text" id="applicantposition" name="personal-info" required><br>
+
+	
+
+	<label for="applicantsalary">Desired salary:</label>
+	<input type="text" id="applicantsalary" name="personal-info" required><br>
+
+
+	
+
+	<!-- days available to work -->
+	<p>Days available to work:</p>
+
+	<label for="Monday">
+	<input id="Monday" type="checkbox" name="days-available" required>Monday
+	</label>
+
+	<label for="Tuesday">
+	<input id="Tuesday" type="checkbox" name="days-available">Tuesday
+	</label>
+
+	<label for="Wednesday">
+	<input id="Wednesday" type="checkbox" name="days-available">Wednesday
+	</label>
+
+	<label for="Thursday">
+	<input id="Thursday" type="checkbox" name="days-available">Thursday
+	</label>
+  
+	<label for="Friday">
+	<input id="Friday" type="checkbox" name="days-available">Friday
+	</label>
+
+	<label for="Saturday">
+	<input id="Saturday" type="checkbox" name="days-available">Saturday
+	</label>
+
+	<label for="Sunday">
+	<input id="Sunday" type="checkbox" name="days-available">Sunday
+	</label>
+
+
+	<!-- Can you work nights? -->
+	<!-- dev notes: this query was changed from a checkbox to radio button -->
+	<p> Can you work nights?
+
+	<label for="nightsconfirm">
+	<input id="nightsconfirm" type="radio" name="nightshift-check" required> Yes
+	</label>
+
+	<label for="nightsdeny">
+	<input id="nightsdeny" type="radio" name="nightshift-check"> No
+	</label>
+
+	<!-- Part-time or Full-time -->
+	<br>
+	<p>Employment desired (select all that apply)
+
+	<label for="parttime">
+	<input id="parttime" type="checkbox" name="part-full" required> Part-time
+	</label>
+
+	<label for="fulltime">
+	<input id="fulltime" type="checkbox" name="part-full"> Full-time
+	</label><br>
+
+
+	
+	<!--date available for work-->
+	<!-- dev notes: these were changed from a drop-down date format to html's date picker format -->
+	<label for="startdate">What's the soonest you will be available to work?</label>
+	<input type="date" id="startdate" name="personal-info" required>
+	<br>
+	<!-- driver's license exp. -->
+	<!-- dev notes: these were changed from a drop-down date format to html's date picker format -->
+	<label for="licenseexp">Driver's License expiration date:</label>
+	<input type="date" id="licenseexp" name="personal-info" required>
+	<br>
+	
+	
+	<!--Applicant License #-->
+	<!--dev notes: this query was changed from a "number" input type to a text box for improved accessibility-->
+	<label for="license">Driver's License Number:</label>
+	<input type="text" id="license" name="personal-info" required>
+	<br>
+
+	<!--Applicant phone number-->
+	<!-- dev notes: this query was changed from a numeric text box type to HTML's "tel" type -->
+	<label for="phone">Phone number:</label>
+
+	<input type="tel" id="phone" name="personal-info" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+
+
+	<!--Are you willing to drive your personal vehicle as part of your duties?-->
+	<!-- dev notes: this query was changed from a checkbox to radio button -->
+	<p> Are you willing to drive your personal vehicle as part of your duties? </p>
+
+	<label for="yesdrive">
+	  <input id="yesdrive" type="radio" name="vehicle-info" required> Yes
+	</label>
+
+	<label for="nodrive">
+	  <input id="nodrive" type="radio" name="vehicle-info"> No
+	</label>
+
+	<!-- Vehicle Information -->
+	<p> Vehicle Information:</p>
+
+	<label for="vehiclemake">Make:</label>
+	<input type="text" id="vehiclemake" name="vehicle-info">
+
+
+	<!--military-->
+	<p>Have you ever served in the military?</p>
+	<label for="militaryconfirm">
+	  <input id="militaryconfirm" type="radio" name="peronal-info" required> Yes
+	</label><br>
+
+	<label for="militarydeny">
+	  <input id="militarydeny" type="radio" name="personal-info"> No
+	</label><br>
+
+	<p>Which branch (select all that apply)</p>
+	<label for="airforce">
+	  <input id="airforce" type="radio" name="peronal-info" required> Air Force
+	</label><br>
+
+
+<!--make hidden unless they selct yes to military---->
+	<label for="coastguard">
+	  <input id="coastguard" type="radio" name="personal-info"> Coast Guard
+	</label><br>
+
+	<label for="nationalguard">
+	  <input id="nationalguard" type="radio" name="personal-info"> National Guard
+	</label><br>
+
+	<label for="army">
+	  <input id="army" type="radio" name="personal-info"> Army
+	</label><br>
+
+	<label for="marines">
+	  <input id="marines" type="radio" name="personal-info"> Marines
+	</label><br>
+
+
+	  <input id="navy" type="radio" name="personal-info"> Navy
+	</label><br>
+
+
+	
+</div>
+	
+	
+<div id="Education" data-tab-content >
+	
+	<label>School: </label>
+	<input type="text" id="School" name="School">
+		<p>
+	<label for="edulevel">What is the highest diploma/degree/certificate you have earned?</label>
+	<input type="text" id="edulevel" name="education-info" required>
+		<p>
+	<!-- name -->
+	<label for="eduname">School name</label>
+	<input type="text" id="eduname" name="education-info" required>
+		<p>
+	<!-- city/state -->
+	<label for="edulocation">City/State</label>
+	<input type="text" id="edulocation" name="education-info" required>
+		<p>
+	<!--grad date-->
+	<label for="graddate">Graduation Date</label>
+	<input type="date" id="graddate" name="education-info" required>
+		<p>
+	<!-- degree -->
+	<label for="degreetype">Major/Degree/Certificate</label>
+	<input type="text" id="degreetype" name="education-info" required>
+		<p>
+		
+	<label for="eduaccomplishments">List any additional or extracurricular accomlishments earned.</label>
+	
+	<textarea id="eduaccomplishments" name="education-info" rows="1" cols="100"></textarea>
+		
+</div>
+	
+	
+<div id="Work" data-tab-content>
+	<!-- employer name -->
+	<label for="employername">Name of employer:</label>
+	<input type="text" id="employername" name="previous-workplace-info" required>
+	<p>
+	<!-- employer address -->
+	<label for="employeradd">Address of workplace:</label>
+	<input type="text" id="employeradd" name="previous-workplace-info" required>
+
+	<p>
+	<!-- supervisor -->
+	<label for="supervisor">Name of supervisor:</label>
+	<input type="text" id="supervisor" name="previous-workplace-info" required>
+	<p>
+	<!-- employment history dates of employment -->
+	<h3>Employment Dates</h3>
+
+	<label for="previousstart">From</label>
+	<input type="date" id="previousstart" name="previous-workplace-info" required>
+	<p>
+	<label for="previousend">To</label>
+	<input type="date" id="previousend" name="previous-workplace-info" required>
+	<p>
+	<!--Employer phone number-->
+	<label for="employerphone">Employer phone number:</label>
+
+	<input type="tel" id="employerphone" name="previous-workplace-info" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+	<small>Please use format: 123-456-7890</small>
+	<p>
+	<!-- employer email -->
+	<label for="email">Email</label>
+	<input type="text" id="email" name="previous-workplace-info" required>
+	<p>
+	<!-- Job title -->
+	<label for="title">Job title:</label>
+	<input type="text" id="title" name="previous-workplace-info" required>
+	<p>
+	<!--Duties performed and accomplishments-->
+	<!--dev notes: this was changed from a text box to html's "text area" to provide more space for the response-->
+	<label for="accomplishments">List your duties and any accomplishments you made:</label>
+	<textarea id="accomplishments" name="previous-workplace-info" rows="1" cols="100"></textarea>
+	<p>
+	<!--May we contact this employer?-->
+	<!--dev notes: this was changed from a checkbox input to a radio button -->
+
+
+	<label for="Employer Contact">May we contact this employer?</label>
+
+	<input id="yescontact" type="radio" name="previous-workplace-info" required>Yes</input>
+	<input id="nocontact" type="radio" name="previous-workplace-info"> No </input>
+
+</div>
+	
+<div id="Refrences" data-tab-content>
+	<!-- name -->
+	<label for="refname">Name</label>
+	<input type="text" id="refname" name="reference-info" required>
+	<p>
+	<!-- Job title -->
+	<label for="reftitle">Title</label>
+	<input type="text" id="reftitle" name="reference-info" required>
+	<p>
+	<!-- Company -->
+	<label for="company">Company</label>
+	<input type="text" id="company" name="reference-info" required>
+	<p>
+	<!-- address -->
+	<label for="refadd">Address</label>
+	<input type="text" id="refadd" name="reference-info" required>
+	<p>
+	<!--phone number-->
+	<label for="refphone">Phone</label>
+
+	<input type="tel" id="refphone" name="reference-info" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+	<small>Please use format: 123-456-7890</small>
+	<p>
+	<!-- email -->
+	<label for="refemail">Email</label>
+	<input type="text" id="refemail" name="reference-info" required>
+
+</div>
+	
+<div id="Miscellaneous" data-tab-content>
+
+	<!-- Have you ever been convicted of a crime? -->
+	<!-- dev notes: this query was changed from a checkbox to radio button -->
+	<p>Have you ever been convicted of a crime?</p>
+
+	<label for="crimeconfirm">
+	<input id="crimeconfirm" type="radio" name="criminal-background" required> Yes
+	</label><br>
+
+	<label for="crimedeny">
+	  <input id="crimedeny" type="radio" name="criminal-background"> No
+	</label><br>
+
+	<!--date-->
+	<label for="crimedate">Date</label>
+	<input type="date" id="crimedate" name="criminal-background">
+
+	<!--misdemeanor/felony-->
+	<!--dev notes: this was adapted from a text box to a radio button-->
+	<label for="misdemeanor">
+	  <input id="misdemeanor" type="radio" name="criminal-background" required> Misdemeanor
+	</label><br>
+
+	<label for="felony">
+	  <input id="felony" type="radio" name="criminal-background"> Felony
+	</label><br>
+
+	<!--description-->
+	<!--dev notes: this was changed from a text box to html's "text area" to provide more space for the response-->
+	<label for="crimedescription">Description</label>
+	<textarea id="crimedescription" name="criminal-background" rows="1" cols="100"></textarea>
+
+	<!--dev notes: I believe the "confinement/probation/community service" and "months/years" are unnecessary info-->
+
+</div>
+	
+	
+	
+	
+	
+	
+	
+	
+<div id="Waiver" data-tab-content >
+	
+	<p>
+	FOR THIS APPLICATION TO BE REVIEWED BY MY EMPLOYER, I AGREE THAT: <br>
+	THE APPROVAL OF THIS APPLICATION OR ANY RELATED FORM DOES NOT MEAN A CONTRACT OF EMPLOYMENT. I KNOW EMPLOYMENT CAN END AT ANY TIME. I ACCEPT THAT MY EMPLOYER CAN CHANGE THEIR BENEFITS AND POLICIES AT ANY GIVEN TIME.
+	I ALLOW THE REVIEW OF ALL MY PRESENTED INFORMATION. I ACCEPT THAT IF ANY INFORMATION IS FALSE, I WOULD BE FIRED AT ANY TIME WITHOUT NOTICE. I ALLOW THE EMPLOYER TO CONTACT ANY SUBMITTED SOURCE GIVEN.
+	I UNDERSTAND THAT MY EMPLOYER HAS A DRUG AND ALCOHOL POLICY. I KNOW THAT THE TESTING CAN OCCUR BEFORE AND DURING EMPLOYMENT. I ACCEPT THESE TERMS FOR MY EMPLOYMENT. I KNOW THAT IF FAIL TO PASS THESE TESTS, I CAN BE FIRED. I UNDERSTAND THAT EMPLOYMENT MAY DEPEND ON PASSING PHYSICAL TESTS.
+	I KNOW THAT MY EMPLOYER MAY ASK A CONSUMER REPORTING AGENCY FOR DATA RELATED TO ME. THIS INCLUDES MY CREDIT RECORDS, MODE OF LIVING, AND ALIKE SUBJECTS. I KNOW THAT I CAN GIVE A WRITTEN REQUEST TO THE EMPLOYER FOR THIS DATA BASED OF THE FAIR CREDIT REPORTING ACT.
+	I UNDERSTAND THAT THERE IS A TESTING PERIOD OF 60 DAYS. I ALSO UNDERSTAND THAT DURING OR AFTER THIS PERIOD MY EMPLOYER CAN FIRE ME.
+	
+	<br>
+	<input type="checkbox" id="WaiverConfirmation" name="WaiverConfirmation">By Selecting The Check Box You Agree to the Waiver Above</input>
+
+	<p>
+	<input type="reset" value="Reset">
+	<input type="submit" value="Submit">
+</div>
+
+
+
+</div>
+
+</form>
+
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,62 @@
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
+}
+
+body {
+  padding: 0;
+  margin: 100px;
+  background-color: white;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 10;
+  padding: auto;
+ 
+  
+}
+
+.tab {
+  cursor: pointer;
+  padding: 20px;
+ border-style: solid;
+}
+
+.tab.active {
+  background-color: lime;
+}
+
+.tab:hover {
+  background-color: cyan;
+}
+
+.tab-content {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+div{
+	text-align: auto;
+}
+
+
+header {
+
+  display: auto;
+  
+}
+
+form{
+	
+	display: auto;
+  justify-content: center;
+  list-style-type: none;
+  margin: 10;
+  padding: auto;
+}
